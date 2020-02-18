@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MasGlobal.Dto.EmployeeDto>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>Anual Salary</th>
+                    <th>Salary Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var employee in Model)
+                {
+                <tr>
+                    <td>@employee.Id</td>
+                    <td>@employee.Name</td>
+                    <td>@employee.Salary</td>
+                    <td>@employee.SalaryType.Name</td>
+                    <td> <a asp-action="Details" asp-route-id="@employee.Id" asp-controller="Home">Details</a></td>
+                </tr>
+                }
+            </tbody>
+        </table>       
+    <a asp-action="Index" asp-controller="Home">Return</a>
+    </body>
+    </html>
