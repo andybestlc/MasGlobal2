@@ -2,6 +2,7 @@
 
 namespace MasGlobal.Dto
 {
+    //employee class
     public class EmployeeDto
     {
 
